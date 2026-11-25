@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI StudyMate | Your Smart Learning Partner</title>
+<style>
+:root{--bg:#081225;--panel:#101f38;--blue:#4f8cff;--cyan:#50d9e8;--text:#edf4ff;--muted:#a8b7d0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+header{position:sticky;top:0;background:#081225ed;backdrop-filter:blur(12px);border-bottom:1px solid #20314d;z-index:5}
+nav{max-width:1100px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.logo{font-size:21px;font-weight:800;letter-spacing:.3px}.logo span{color:var(--cyan)}nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px}
+.wrap{max-width:1100px;margin:auto;padding:0 22px}.hero{padding:86px 0 70px;display:grid;grid-template-columns:1.2fr .8fr;gap:38px;align-items:center}
+.tag{display:inline-block;color:var(--cyan);background:#123047;padding:7px 13px;border-radius:30px;font-size:13px;font-weight:bold}
+h1{font-size:clamp(38px,6vw,64px);line-height:1.08;margin:20px 0}h1 span{color:var(--cyan)}.lead{color:var(--muted);font-size:18px;max-width:620px}
+.btn{display:inline-block;background:linear-gradient(110deg,var(--blue),#3973e8);color:white;text-decoration:none;padding:13px 20px;border-radius:10px;font-weight:bold;margin:12px 8px 0 0;border:0;cursor:pointer}
+.btn.alt{background:#172a48;border:1px solid #304765}.visual{background:linear-gradient(145deg,#142b4b,#0d1b31);border:1px solid #29415f;border-radius:22px;padding:25px;box-shadow:0 20px 60px #0005}
+.visual h3{margin-top:0}.stat{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid #2a3d58;color:var(--muted)}.stat strong{color:var(--cyan)}
+section{padding:58px 0}.section-title{text-align:center;font-size:32px;margin:0 0 10px}.sub{text-align:center;color:var(--muted);margin:0 auto 32px;max-width:650px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--panel);border:1px solid #233a59;border-radius:16px;padding:22px}.card .ico{font-size:27px}.card h3{margin:10px 0 6px}.card p{color:var(--muted);margin:0}
+.demo{max-width:760px;margin:auto;background:var(--panel);border:1px solid #29415f;border-radius:18px;padding:22px}.demo textarea{width:100%;min-height:100px;background:#09172b;border:1px solid #304765;border-radius:10px;color:white;padding:13px;font:inherit;resize:vertical}.demo button{margin-top:12px}.answer{margin-top:16px;padding:15px;background:#0a192e;border-radius:10px;color:#d5e6ff;min-height:50px;white-space:pre-wrap}
+footer{border-top:1px solid #20314d;padding:28px 0;color:var(--muted);text-align:center;font-size:13px}
+.notice{font-size:13px;color:#91a5c3;margin-top:18px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:55px}.cards{grid-template-columns:1fr}nav a{margin-left:9px;font-size:12px}.visual{margin-top:8px}}
+</style>
+</head>
+<body>
+<header><nav><div class="logo">AI <span>StudyMate</span></div><div><a href="#features">Features</a><a href="#demo">Try Demo</a><a href="#about">About</a></div></nav></header>
+<main>
+<div class="wrap hero">
+<div><span class="tag">YOUR SMART LEARNING PARTNER</span><h1>Study smarter.<br><span>Learn faster.</span></h1><p class="lead">An AI-powered study companion concept that helps students understand difficult topics, create revision notes, and plan their study time.</p><a class="btn" href="#demo">Try the demo</a><a class="btn alt" href="#features">Explore features</a></div>
+<div class="visual"><h3>📘 Your study dashboard</h3><div class="stat"><span>Learning assistant</span><strong>Ready</strong></div><div class="stat"><span>Quick notes</span><strong>Available</strong></div><div class="stat"><span>Practice quiz</span><strong>Available</strong></div><div class="stat"><span>Study planner</span><strong>Available</strong></div><p class="notice">A student-focused front-end demonstration.</p></div>
+</div>
+<section id="features"><div class="wrap"><h2 class="section-title">Everything in one study space</h2><p class="sub">Explore the key features planned for AI StudyMate.</p><div class="cards">
+<div class="card"><div class="ico">🤖</div><h3>AI Learning Assistant</h3><p>Ask questions and get simple explanations designed to make difficult topics easier to understand.</p></div>
+<div class="card"><div class="ico">📝</div><h3>Smart Notes</h3><p>Turn long topics into clear revision points and organized study notes.</p></div>
+<div class="card"><div class="ico">🧠</div><h3>Practice Quiz</h3><p>Test your understanding with short questions and quick feedback.</p></div>
+<div class="card"><div class="ico">📅</div><h3>Study Planner</h3><p>Break your subjects into manageable study sessions.</p></div>
+<div class="card"><div class="ico">💡</div><h3>Simple Explanations</h3><p>Explore beginner-friendly explanations of academic concepts.</p></div>
+<div class="card"><div class="ico">🎯</div><h3>Student Focus</h3><p>Keep learning tools together in one clean, easy-to-use interface.</p></div>
+</div></div></section>
+<section id="demo"><div class="wrap"><h2 class="section-title">Try the StudyMate demo</h2><p class="sub">Enter a topic and choose a study tool. This sample runs in your browser.</p><div class="demo"><label for="topic"><strong>What do you want to study?</strong></label><textarea id="topic" placeholder="Example: Explain artificial intelligence in simple words"></textarea><button class="btn" onclick="makeAnswer('explain')">Explain simply</button><button class="btn alt" onclick="makeAnswer('notes')">Make quick notes</button><button class="btn alt" onclick="makeAnswer('quiz')">Create a quiz</button><div class="answer" id="answer">Your sample response will appear here.</div><p class="notice">Demo limitation: responses are sample templates, not generated by a live AI model. A secure server and AI API connection are required for real AI responses.</p></div></div></section>
+<section id="about"><div class="wrap"><h2 class="section-title">About AI StudyMate</h2><p class="sub">AI StudyMate is a college project concept exploring how artificial intelligence can support students through personalized explanations, revision assistance, and study planning. The goal is to make digital learning more accessible and organized.</p></div></section>
+</main>
+<footer>© 2026 AI StudyMate · College Project Demonstration</footer>
+<script>
+function makeAnswer(type){
+ const topic=document.getElementById('topic').value.trim();
+ const box=document.getElementById('answer');
+ if(!topic){box.textContent='Please enter a topic first.';return;}
+ const name=topic.replace(/[.?!]+$/,'');
+ const replies={
+ explain:'Simple explanation of '+name+':\\n\\nStart by identifying the main idea. Break the topic into smaller parts, understand what each part does, and connect the parts with a practical example.\\n\\nThis is a sample response. Connect an AI service to generate a topic-specific explanation.',
+ notes:'Quick revision notes for '+name+':\\n\\n1. Definition: Write the meaning in one or two sentences.\\n2. Key concepts: List the three most important ideas.\\n3. Working: Note the main steps or process.\\n4. Example: Add one real-world example.\\n5. Revision: Review the key terms before your exam.\\n\\nThis is a sample template.',
+ quiz:'Practice quiz: '+name+'\\n\\n1. What is the main idea of this topic?\\n2. Explain one important concept.\\n3. Give one practical example.\\n\\nWrite your answers in your notebook and compare them with your class notes.'
+ };
+ box.textContent=replies[type];
+}
+</script>
+</body>
+</html>
